@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Home</title>
+  <link rel="logo" href="">
+  <link href="bootstrap.min.css" rel="stylesheet">
+  <script src="bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/webamp@1.4.0/built/webamp.bundle.min.js"></script>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<div class="app">
+		<div class="menu-toggle">
+			<div class="hamburger">
+				<span></span>
+			</div>
+		</div>
+
+		<aside class="sidebar">
+			<h3>CodexSecret</h3>
+
+			<nav class="menu sticky">
+				<a href="home.html" class="menu-item is-active">Home</a>
+				<a href="about.html" class="menu-item">About</a>
+				<a href="https://arg.codexsecret.com" class="menu-item">ARGs</a>
+        <a href="gallery.html" class="menu-item">Gallery</a>
+        <a href="blog.html" class="menu-item">Blog</a>
+        <a href="redacted.html" class="menu-item">???</a>
+				<a href="contact.html " class="menu-item">Contact</a>
+			</nav>
+
+		</aside>
+
+		<main class="content">
+			<div class="container bg-primary mt-4 mb-4 ms-header pb-4 pt-4 rounded" style="width:20em;">
+				<p style="font-family:RetroFont; font-size:2em; color:purple;text-shadow:3px 0 15px orange" class="text-center">HOME</p>
+    	</div>
+			<div class="container bg-primary mt-4 mb-4 pb-4 pt-4 ps-4 pe-4 rounded">
+				<h2 class="text-center" style="font-family:RetroFont;">Welcome to CodexSecret!</h2><br>
+	      <p>This is my cool little area with wikis, blogs, and to share things with the world!</p>
+	      <p>Looking for something to do?<br>
+	         You can find out more about me <a href="about.html">here!</a><br>
+	         Looking for the ARG stuff? The Cafe and Diner Wiki? Right <a href="https://arg.codexsecret.com">here</a>!<br>
+	         Want to see some cool photos or projects? You can head to the <a href="gallery.html">gallery</a>!<br>
+	         If you like to read, my <a href="blog.html">blog</a> might be something you might like. Be warned, <br></p>
+	         <p class="text-center">???</p>
+	         <!--01000001 01101000 00100000 01111001 01100101 01110011 00101100 00100000 01000010 01101001 01101110 01100001 01110010 01111001 00101110 00100000 01000110 01110101 01101110 01101110 01111001 00100000 01100011 01101111 01100100 01100101 00101110--->
+	    </div>
+		</main>
+	</div>
+
+  <div style="width:40px; height:40px; position:absolute; bottom:0px; right:0px;">
+  	<div id="winamp-container"></div>
+      <script>
+        const Winamp = window.Webamp;
+        // All configuration options are optional.
+        const webamp = new Webamp({
+            // Optional.
+            initialTracks: [
+                {
+                    metaData: {
+                        artist: "Frankie Valli",
+                        title: "Can't Take My Eyes Off You",
+                    },
+                    url: "https://files.catbox.moe/6ba9k0.mp3",
+                }, {
+                    metaData: {
+                        artist: "The Ink Spots",
+                        title: "I don't want to set the world on fire",
+                    },
+                    url: "https://files.catbox.moe/zkxw5h.mp3",
+                },
+                {
+                    metaData: {
+                        artist: "Bart Howard",
+                        title: "Fly Me To The Moon",
+                    },
+                    url: "https://files.catbox.moe/afkiuj.mp3",
+                },
+                {
+                    metaData: {
+                        artist: "Shalom Margaret",
+                        title: "Viva La Vida",
+                    },
+                    url: "https://files.catbox.moe/zzwk1p.mp3",
+                },
+                {
+                    metaData: {
+                        artist: "Rex Orange County",
+                        title: "Sunflower",
+                    },
+                    url: "https://files.catbox.moe/oprupy.mp3",
+                },
+                {
+                    metaData: {
+                        artist: "Cryst",
+                        title: "I Just Want to Be the One You Love",
+                    },
+                    url: "https://files.catbox.moe/vyem15.mp3",
+                }
+              ],
+            initialSkin: {
+                url: "https://files.catbox.moe/it5ffz.wsz"
+            },
+        });
+        webamp.renderWhenReady(document.getElementById('winamp-container'));
+        </script>
+      </div>
+
+	<script>
+		const menu_toggle = document.querySelector('.menu-toggle');
+		const sidebar = document.querySelector('.sidebar');
+
+		menu_toggle.addEventListener('click', () => {
+			menu_toggle.classList.toggle('is-active');
+			sidebar.classList.toggle('is-active');
+		});
+	</script>
+
+</body>
+</html>
